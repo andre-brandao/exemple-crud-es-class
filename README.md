@@ -1,30 +1,56 @@
-# create-svelte
-
-Everything you need to build a Svelte project, powered by
-[`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+# Drizzle CRUD Example for Software Engeniring Class
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or
-`pnpm install` or `yarn`), start a development server:
+### Install project dependencies
+
+```bash
+npm i
+```
+
+### Start DB
+
+```bash
+docker compose up
+# OR use the alias
+npm run db:start
+```
+
+### Populating DB
+
+Push (DEV enviroment) - NOT RECOMENDED FOR PRODUCTION - pushes all schema
+changes to the db, does not create a migration file
+
+```bash
+npm run db:push
+
+```
+
+OR
+
+Migrations (Production enviroment)
+
+```bash
+# Generates a new SQL migration file
+npm run db:generate
+
+# Executes the migration script on the connect db
+npm run db:migrate
+```
+
+### Start Development server on localhost:5173
 
 ```bash
 npm run dev
+```
+
+## Other DB Commands
+
+```bash
+npm run db:drop # Drops a migration
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm run db:studio # Opens a database inspector to edit and create data or interacting with the db
 ```
 
 ## Building
