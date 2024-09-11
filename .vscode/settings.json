@@ -1,0 +1,14 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "driver": "PostgreSQL",
+      "password": "mysecretpassword",
+      "username": "root",
+      "database": "localhost",
+      "connectString": "postgres://root:mysecretpassword@localhost:5432/local",
+      "name": "sandro-crud"
+    }
+  ]
+}
